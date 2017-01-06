@@ -1,0 +1,15 @@
+Source: efind-taglib
+Section: utils
+Priority: optional
+Maintainer: Sebastian Fedrau <sebastian.fedrau@gmail.com>
+Build-Depends: debhelper (>=9), libtagc0-dev
+Standards-Version: 3.9.6
+Homepage: https://github.com/20centaurifux/efind-taglib
+Vcs-Git: https://github.com/20centaurifux/efind-taglib.git
+
+Package: efind-taglib
+Architecture: any
+Depends: efind (>= 0.1-1), libtagc0 (>= 1.7.0), ${shlibs:Depends}
+Description: Filter search results by audio tags and properties.
+ efind extension for filtering search results by audio tags
+ and properties using taglib.
