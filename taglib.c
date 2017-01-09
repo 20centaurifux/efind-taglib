@@ -99,22 +99,22 @@ _read_properties(const char *filename)
 
 				if(ptr)
 				{
-					strncpy(cache.artist, ptr, MAX_TAG);
+					strncpy(cache.artist, ptr, MAX_TAG - 1);
 				}
 
 				if((ptr = taglib_tag_album(tag)))
 				{
-					strncpy(cache.album, ptr, MAX_TAG);
+					strncpy(cache.album, ptr, MAX_TAG - 1);
 				}
 
 				if((ptr = taglib_tag_title(tag)))
 				{
-					strncpy(cache.title, ptr, MAX_TAG);
+					strncpy(cache.title, ptr, MAX_TAG - 1);
 				}
 
 				if((ptr = taglib_tag_genre(tag)))
 				{
-					strncpy(cache.genre, ptr, MAX_TAG);
+					strncpy(cache.genre, ptr, MAX_TAG - 1);
 				}
 
 				taglib_tag_free_strings();
