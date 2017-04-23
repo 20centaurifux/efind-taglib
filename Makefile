@@ -2,6 +2,8 @@ CC=gcc
 CFLAGS=-Wall -std=c99 -fPIC -O2 -nostartfiles -shared
 LIBS=-ltag_c 
 
+VERSION=0.1.0
+
 all:
 	$(CC) $(CFLAGS) $(INC) ./taglib.c -o ./taglib.so $(LDFLAGS) $(LIBS)
 
@@ -15,3 +17,10 @@ install:
 
 uninstall:
 	rm -f "$(DESTDIR)/etc/efind/extensions/taglib.so"
+
+tarball:
+	cd .. && \
+	rm -rf ./efind-taglib-$(VERSION) && \
+	cp -r ./efind-taglib ./efind-taglib-$(VERSION) && \
+	find ./efind-taglib-$(VERSION) -name ".git*" | xargs rm -r && \
+	tar cfJ ./efind-taglib-$(VERSION).tar.xz ./efind-taglib-$(VERSION) --remove-files 
