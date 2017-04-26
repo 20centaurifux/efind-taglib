@@ -39,7 +39,7 @@ SEARCH_ARGS = [[['type=file and audio_length()=90 or (audio_length()>0 and audio
                [['type=file and title_equals("pink 90")'], ["test-data/pink90.mp3"]]]
 
 INVALID_SEARCH_ARGS = [['readable and title_equals(" ) and audio_bitrate()>5'],
-                       [random_string(1024)],
+                       ['audio_bitrate("%s")' % (random_string())],
                        ['writable or album_equals("%s")' % (random_string(2048))]]
 
 if __name__ == "__main__":
