@@ -31,7 +31,7 @@ def test_search(argv, expected, success=True):
 def random_string(length=32):
 	return "".join(random.choice(string.ascii_uppercase + string.digits) for _ in range(length))
 
-SEARCH_ARGS = [[['type=file and audio_length()=90 or audio_bitrate()<100'],["test-data/pink90.mp3", "test-data/sinus30.ogg"]],
+SEARCH_ARGS = [[['type=file and audio_length()=90 or (audio_length()>0 and audio_bitrate()<100)'],["test-data/pink90.mp3", "test-data/sinus30.ogg"]],
                [['type=file and audio_length()>5'], ["test-data/pink90.mp3", "test-data/sinus30.ogg", "test-data/square45.flac"]],
                [['type=file and artist_matches("foo")'], ["test-data/pink90.mp3", "test-data/pink5.mp3"]],
                [['type=file and genre_matches("noise") and audio_samplerate()=48000'], ["test-data/pink90.mp3", "test-data/pink5.mp3", "test-data/square45.flac"]],
