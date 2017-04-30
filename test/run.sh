@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 #  efind-taglib test suite.
 #
@@ -13,7 +13,7 @@
 
 PYTHON=/usr/bin/python2
 
-function generate_test_files()
+generate_test_files()
 {
 	echo "Generating test files."
 
@@ -22,14 +22,14 @@ function generate_test_files()
 	dd if=/dev/urandom of=test-data/rnd-8M.baz bs=1M count=8
 }
 
-function run_test()
+run_test()
 {
 	# run Python script:
 	echo "Running test suite."
         $PYTHON ./test.py
 }
 
-function cleanup()
+cleanup()
 {
 	# delete generated test files:
 	echo "Deleting test files."
