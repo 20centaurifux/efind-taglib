@@ -33,7 +33,7 @@
 #include "extension-interface.h"
 
 #define NAME        "taglib"
-#define VERSION     "0.1.0"
+#define VERSION     "0.1.1"
 #define DESCRIPTION "Read tags and properties from audio files."
 
 #define MAX_TAG 512
@@ -84,6 +84,12 @@ _read_properties(const char *filename)
 
 	if(strcmp(filename, cache.filename))
 	{
+		if(strlen(filename) >= PATH_MAX)
+		{
+			fprintf(stderr, "Filename exceeds allowed maximum length.\n");
+			return NULL;
+		}
+
 		TagLib_File *file;
 	
 		memset(&cache, 0, sizeof(AudioProperties));
@@ -134,7 +140,7 @@ _read_properties(const char *filename)
 
 			if(success)
 			{
-				strncpy(cache.filename, filename, PATH_MAX);
+				strcpy(cache.filename, filename);
 				properties = &cache;
 			}
 
@@ -177,6 +183,10 @@ _regex_escape(const char *str)
 
 			*ptr = '\0';
 		}
+		else
+		{
+			fprintf(stderr, "Allocation error.\n");
+		}
 	}
 	else
 	{
@@ -190,6 +200,9 @@ static int
 _regexec(const char *tag, const char *pattern)
 {
 	int ret = 0;
+
+	assert(tag != NULL);
+	assert(pattern != NULL);
 
 	regex_t re;
 
@@ -221,6 +234,10 @@ _compare_tags(const char *tag, const char *query)
 			ret = _regexec(tag, pattern);
 
 			free(pattern);
+		}
+		else
+		{
+			fprintf(stderr, "Allocation error.\n");
 		}
 
 		free(escaped);
