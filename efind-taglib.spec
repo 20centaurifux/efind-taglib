@@ -5,7 +5,7 @@ Summary: Filter search results by audio tags and properties.
 
 License: GPLv3+
 URL: https://github.com/20centaurifux/efind-taglib
-Source0: efind-taglib-0.1.0.tar.xz
+Source0: efind-taglib-0.1.1.tar.xz
 
 BuildRequires: taglib-devel
 Requires: taglib, efind
