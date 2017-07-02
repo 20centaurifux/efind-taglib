@@ -1,6 +1,6 @@
 # Maintainer: Sebastian Fedrau <sebastian.fedrau@gmail.com>
 pkgname=efind-taglib
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 epoch=
 pkgdesc="Filter search results by audio tags and properties."

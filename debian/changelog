@@ -1,3 +1,9 @@
+efind-taglib (0.1-2) unstable; urgency=low
+
+  * check length of filename to avoid buffer overflows
+
+ -- Sebastian Fedrau <sebastian.fedrau@gmail.com>  Sun, 02 Jul 2017 09:53:59 +0100
+
 efind-taglib (0.1-1) unstable; urgency=low
 
   * Initial release

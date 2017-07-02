@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: efind
-Source: https://github.com/20centaurifux/efind-gdkpixbuf
+Upstream-Name: efind-taglib
+Source: https://github.com/20centaurifux/efind-taglib
 
 Files: *
 Copyright: 2017, Sebastian Fedrau <sebastian.fedrau@gmail.com>

@@ -1,5 +1,5 @@
 Name: efind-taglib
-Version: 0.1.0
+Version: 0.1.1
 Release:        1%{?dist}
 Summary: Filter search results by audio tags and properties.
 

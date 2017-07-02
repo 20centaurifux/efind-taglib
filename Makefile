@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS=-Wall -std=c99 -fPIC -O2 -nostartfiles -shared
 LIBS=-ltag_c 
 
-VERSION=0.1.0
+VERSION=0.1.1
 
 all:
 	$(CC) $(CFLAGS) $(INC) ./taglib.c -o ./taglib.so $(LDFLAGS) $(LIBS)
