@@ -1,6 +1,6 @@
 # Maintainer: Sebastian Fedrau <sebastian.fedrau@gmail.com>
 pkgname=efind-taglib
-pkgver=0.1.1
+pkgver=0.2.0
 pkgrel=1
 epoch=
 pkgdesc="Filter search results by audio tags and properties."
@@ -31,5 +31,5 @@ build() {
 
 package() {
 	cd "$pkgname-$pkgver"
-	make DESTDIR="$pkgdir/" install
+	make DESTDIR="$pkgdir/" LIBDIR=/usr/lib install
 }

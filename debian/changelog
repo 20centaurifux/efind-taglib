@@ -1,3 +1,9 @@
+efind-taglib (0.2-0) unstable; urgency=low
+
+  * new file locations
+
+ -- Sebastian Fedrau <sebastian.fedrau@gmail.com>  Sat, 23 Dec 2017 15:50:40 +0100
+
 efind-taglib (0.1-2) unstable; urgency=low
 
   * check length of filename to avoid buffer overflows
