@@ -1,11 +1,11 @@
 Name: efind-taglib
-Version: 0.2.0
+Version: 0.2.1
 Release:        1%{?dist}
 Summary: Filter search results by audio tags and properties.
 
 License: GPLv3+
 URL: https://github.com/20centaurifux/efind-taglib
-Source0: efind-taglib-0.2.0.tar.xz
+Source0: efind-taglib-0.2.1.tar.xz
 
 BuildRequires: taglib-devel
 Requires: taglib, efind

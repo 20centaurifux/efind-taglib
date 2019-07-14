@@ -11,7 +11,7 @@
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 #  General Public License v3 for more details.
 
-PYTHON=/usr/bin/python2
+PYTHON=/usr/bin/python3
 
 generate_test_files()
 {

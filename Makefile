@@ -11,7 +11,7 @@ else
 	LIBDIR?=$(PREFIX)/lib
 endif
 
-VERSION=0.2.0
+VERSION=0.2.1
 
 all:
 	$(CC) $(CFLAGS) $(INC) ./taglib.c -o ./taglib.so $(LDFLAGS) $(LIBS)

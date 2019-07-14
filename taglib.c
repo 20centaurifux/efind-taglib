@@ -33,7 +33,7 @@
 #include "extension-interface.h"
 
 #define NAME        "taglib"
-#define VERSION     "0.2.0"
+#define VERSION     "0.2.1"
 #define DESCRIPTION "Read tags and properties from audio files."
 
 #define MAX_TAG 512
